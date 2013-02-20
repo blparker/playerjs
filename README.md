@@ -18,7 +18,7 @@ You can see several examples in the test directory.
 
 **HTML**
 
-    <iframe id="player1" src="http://player.vimeo.com/video/19508202?api=1&amp;player_id=player1" width="500" height="281" frameborder="0" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowFullScreen"></iframe>
+    <iframe id="player3" width="560" height="315" src="http://www.youtube.com/embed/ndrkwqAkt6o?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
     <br>
     <button class="play">Play</button>
     <button class="pause">Pause</button>
