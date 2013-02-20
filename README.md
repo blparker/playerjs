@@ -16,14 +16,14 @@ You can see several examples in the test directory.
 
 ##### YouTube
 
-** HTML **
+**HTML**
 
     <iframe id="player1" src="http://player.vimeo.com/video/19508202?api=1&amp;player_id=player1" width="500" height="281" frameborder="0" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowFullScreen"></iframe>
     <br>
     <button class="play">Play</button>
     <button class="pause">Pause</button>
 
-** JavaScript **
+**JavaScript**
 
     var yt = PlayerJS.attach('your_player_id');
     yt.on('ready', function() {
