@@ -4,15 +4,8 @@ PlayerJS.register({
   key : 'yt',
   api : '//www.youtube.com/iframe_api',
   init : function(player, events) {
-
     window['onYouTubeIframeAPIReady'] = function() {
-
-      var ytPlayer = new YT.Player(player.id, {
-        height: '390',
-        width: '640',
-        videoId: 'u1zgFlCw8Aw'
-      });
-
+      var ytPlayer = new YT.Player(player.id, {});
       ytPlayer.addEventListener('onReady', events.ready);
     };
   }
