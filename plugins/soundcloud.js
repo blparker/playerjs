@@ -5,9 +5,7 @@ PlayerJS.register({
   api : '//w.soundcloud.com/player/api.js',
   init : function(player, events) {
     var scPlayer = SC.Widget(player);
-    scPlayer.bind(SC.Widget.Events.READY, function() {
-      console.log("### SC READY");
-    });
+    scPlayer.bind(SC.Widget.Events.READY, events.ready);
   }
 });
 
