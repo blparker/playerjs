@@ -9,9 +9,19 @@ PlayerJS.register({
       player.src += '&player_id=' + player.id;
     }
   },
-  init : function(player, events) {
+  init : function(player, events, cb) {
     var p = $f(player);
     p.addEvent('ready', events.ready);
+    cb(p);
+  },
+  bind : function(player, events) {
+    events.play = function() {
+      player.api('play');
+    };
+
+    events.pause = function() {
+      player.api('pause');
+    };
   }
 });
 

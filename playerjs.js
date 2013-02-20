@@ -5,7 +5,9 @@ var PlayerJS = (function() {
     this.baseUrl = this.getBaseUrl();
     this.id = this.getId();
     this.events = {
-      'ready' : function() {}
+      'ready' : function() {},
+      'play' : function() {},
+      'pause' : function() {}
     };
 
     // Find plugin, execute init
@@ -36,7 +38,9 @@ var PlayerJS = (function() {
 
       var self = this;
       function scriptLoaded() {
-        plugin.plugin.init(self.player, self.events);
+        plugin.plugin.init(self.player, self.events, function(player) {
+          plugin.plugin.bind(player, self.events);
+        });
       }
     }
   }
@@ -44,6 +48,12 @@ var PlayerJS = (function() {
   Player.prototype = {
     on : function(event, cb) {
       this.events[event] = cb;
+    },
+    play : function() {
+      this.events.play();
+    },
+    pause : function() {
+      this.events.pause();
     },
     getBaseUrl : function() {
       var u = new Creator('a').attr('href', this.player.src)
