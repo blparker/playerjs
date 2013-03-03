@@ -16,6 +16,8 @@ PlayerJS.register({
     events.pause = function() {
       player.pause();
     };
+
+    events.stop = function() {};
   }
 });
 

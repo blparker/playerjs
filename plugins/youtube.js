@@ -18,6 +18,10 @@ PlayerJS.register({
     events.pause = function() {
       player.pauseVideo();
     };
+
+    events.stop = function() {
+      player.stopVideo();
+    };
   }
 });
 

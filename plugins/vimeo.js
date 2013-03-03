@@ -22,6 +22,10 @@ PlayerJS.register({
     events.pause = function() {
       player.api('pause');
     };
+
+    events.stop = function() {
+      player.api('stop');
+    };
   }
 });
 
